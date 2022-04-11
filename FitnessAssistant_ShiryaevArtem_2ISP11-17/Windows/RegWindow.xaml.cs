@@ -26,12 +26,13 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17.Windows
 
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
-
+            HelperWindow helperWindow = new HelperWindow();
+            helperWindow.Show();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

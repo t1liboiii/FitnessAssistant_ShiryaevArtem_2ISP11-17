@@ -389,7 +389,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMI_ValueLess16_return()
+        public void CalcBMI_ValueLess16_returnEx()
         {
             //Arrange
             double weight = 20;
@@ -402,20 +402,20 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
         }
 
         [TestMethod]
-        public void CalcBMI_Value17_return()
+        public void CalcBMI_Value17_returnEx()
         {
             //Arrange
             double weight = 50;
             double height = 1.7;
             var ex = "Недостаточная масса тела";
             //Act
-            string act = FitnessAssistant_ShiryaevArtem_2ISP11_17.ClassHelper.bmi.BMI(weight, height); ;
+            string act = FitnessAssistant_ShiryaevArtem_2ISP11_17.ClassHelper.bmi.BMI(weight, height);
             //Assert
             Assert.AreEqual(ex, act);
         }
 
         [TestMethod]
-        public void CalcBMI_ValueNormal_return()
+        public void CalcBMI_ValueNormal_returnEx()
         {
             //Arrange
             double weight = 65;
@@ -427,7 +427,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMI_ValueOverweight_return()
+        public void CalcBMI_ValueOverweight_returnEx()
         {
             //Arrange
             double weight = 70;
@@ -439,7 +439,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMI_ValueObesity1_return()
+        public void CalcBMI_ValueFatness1_returnEx()
         {
             //Arrange
             double weight = 85;
@@ -451,7 +451,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMI_ValueObesity2_return()
+        public void CalcBMI_ValueFatness2_returnEx()
         {
             //Arrange
             double weight = 100;
@@ -463,7 +463,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMI_ValueObesity3_return()
+        public void CalcBMI_ValueFatness3_returnEx()
         {
             //Arrange
             double weight = 120;
@@ -475,7 +475,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMI_ValueZeroWeight_return()
+        public void CalcBMI_ValueWeight0_returnEx()
         {
             //Arrange
             double weight = 0;
@@ -487,7 +487,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMI_ValueZeroHeight_return()
+        public void CalcBMI_ValueHeight0_returnEx()
         {
             //Arrange
             double weight = 50;
@@ -499,7 +499,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMI_ValueZero_return()
+        public void CalcBMI_Value0_returnEx()
         {
             //Arrange
             double weight = 0;
@@ -512,7 +512,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
         }
 
         [TestMethod]
-        public void CalcBMI_ValueMinus_return()
+        public void CalcBMI_ValueMinus_returnEx()
         {
             //Arrange
             double weight = -5;
@@ -526,7 +526,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
 
 
         [TestMethod]
-        public void CalcBMI_ValueMinusHeight_return()
+        public void CalcBMI_ValueHeightMin_returnEx()
         {
             //Arrange
             double weight = 0;
@@ -539,7 +539,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
         }
 
         [TestMethod]
-        public void CalcBMI_ValueMinusWeight_return()
+        public void CalcBMI_ValueWeightMin_returnEx()
         {
             //Arrange
             double weight = -5;
@@ -552,7 +552,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
         }
 
         [TestMethod]
-        public void CalcBMR_ValueMan_return()
+        public void CalcBMR_ValueDefaultMan_returnEx()
         {
             //Arrange
             string name = "Мужской";
@@ -567,7 +567,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
         }
 
         [TestMethod]
-        public void CalcBMR_ValueWoman_return()
+        public void CalcBMR_ValueDefaultWoman_returnEx()
         {
             //Arrange
             string name = "Женский";
@@ -582,13 +582,13 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
         }
 
         [TestMethod]
-        public void CalcBMR_ValueWomanWeight_return()
+        public void CalcBMR_ValueWomanWeight0_returnEx()
         {
             //Arrange
             string name = "Женский";
             double weight = 0;
-            double height = 165;
-            int age = 21;
+            double height = 170;
+            int age = 25;
             var ex = "Ошибка";
             //Act
             string act = FitnessAssistant_ShiryaevArtem_2ISP11_17.ClassHelper.bmi.BMR(name, weight, height, age);
@@ -596,13 +596,13 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMR_ValueWomanHeight_return()
+        public void CalcBMR_ValueWomanHeight0_returnEx()
         {
             //Arrange
             string name = "Женский";
-            double weight = 60;
+            double weight = 70;
             double height = 0;
-            int age = 21;
+            int age = 22;
             var ex = "Ошибка";
             //Act
             string act = FitnessAssistant_ShiryaevArtem_2ISP11_17.ClassHelper.bmi.BMR(name, weight, height, age);
@@ -610,12 +610,12 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMR_ValueWomanAge_return()
+        public void CalcBMR_ValueWomanAge0_returnEx()
         {
             //Arrange
             string name = "Женский";
-            double weight = 60;
-            double height = 160;
+            double weight = 55;
+            double height = 150;
             int age = 0;
             var ex = "Ошибка";
             //Act
@@ -624,12 +624,12 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMR_ValueWomanAgeMinus_return()
+        public void CalcBMR_ValueWomanAgeMin_returnEx()
         {
             //Arrange
             string name = "Женский";
-            double weight = 60;
-            double height = 160;
+            double weight = 50;
+            double height = 155;
             int age = -60;
             var ex = "Ошибка";
             //Act
@@ -638,13 +638,13 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMR_ValueWomanWeightMinus_return()
+        public void CalcBMR_ValueWomanWeightMin_returnEx()
         {
             //Arrange
             string name = "Женский";
             double weight = -90;
-            double height = 160;
-            int age = 80;
+            double height = 120;
+            int age = 15;
             var ex = "Ошибка";
             //Act
             string act = FitnessAssistant_ShiryaevArtem_2ISP11_17.ClassHelper.bmi.BMR(name, weight, height, age);
@@ -653,13 +653,13 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
         }
 
         [TestMethod]
-        public void CalcBMR_ValueWomanHeightMinus_return()
+        public void CalcBMR_ValueWomanHeightMin_returnEx()
         {
             //Arrange
             string name = "Женский";
-            double weight = 60;
-            double height = -160;
-            int age = 80;
+            double weight = 90;
+            double height = -120;
+            int age = 92;
             var ex = "Ошибка";
             //Act
             string act = FitnessAssistant_ShiryaevArtem_2ISP11_17.ClassHelper.bmi.BMR(name, weight, height, age);
@@ -668,12 +668,12 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
         }
 
         [TestMethod]
-        public void CalcBMR_ValueManWeght_return()
+        public void CalcBMR_ValueManWeght0_returnEx()
         {
             //Arrange
             string name = "Мужской";
             double weight = 0;
-            double height = 170;
+            double height = 190;
             int age = 21;
             var ex = "Ошибка";
             //Act
@@ -682,11 +682,11 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMR_ValueManHeight_return()
+        public void CalcBMR_ValueManHeight0_returnEx()
         {
             //Arrange
             string name = "Мужской";
-            double weight = 60;
+            double weight = 70;
             double height = 0;
             int age = 21;
             var ex = "Ошибка";
@@ -698,12 +698,12 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
 
 
         [TestMethod]
-        public void CalcBMR_ValueManAge_return()
+        public void CalcBMR_ValueManAge0_returnEx()
         {
             //Arrange
             string name = "Мужской";
-            double weight = 70;
-            double height = 170;
+            double weight = 85;
+            double height = 180;
             int age = 0;
             var ex = "Ошибка";
             //Act
@@ -712,12 +712,26 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMR_ValueManWeightMinus_return()
+        public void CalcBMR_ValueManWeightMin_returnEx()
         {
             //Arrange
             string name = "Мужской";
-            double weight = -40;
+            double weight = -993;
             double height = 170;
+            int age = 88;
+            var ex = "Ошибка";
+            //Act
+            string act = FitnessAssistant_ShiryaevArtem_2ISP11_17.ClassHelper.bmi.BMR(name, weight, height, age);
+            //Assert
+            Assert.AreEqual(ex, act);
+        }
+        [TestMethod]
+        public void CalcBMR_ValueManHeightMin_returnEx()
+        {
+            //Arrange
+            string name = "Мужской";
+            double weight = 80;
+            double height = -200;
             int age = 21;
             var ex = "Ошибка";
             //Act
@@ -726,26 +740,12 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             Assert.AreEqual(ex, act);
         }
         [TestMethod]
-        public void CalcBMR_ValueManHeightMinus_return()
+        public void CalcBMR_ValueManAgeMin_returnEx()
         {
             //Arrange
             string name = "Мужской";
-            double weight = 60;
-            double height = -170;
-            int age = 21;
-            var ex = "Ошибка";
-            //Act
-            string act = FitnessAssistant_ShiryaevArtem_2ISP11_17.ClassHelper.bmi.BMR(name, weight, height, age);
-            //Assert
-            Assert.AreEqual(ex, act);
-        }
-        [TestMethod]
-        public void CalcBMR_ValueManAgeMinus_return()
-        {
-            //Arrange
-            string name = "Мужской";
-            double weight = 90;
-            double height = 170;
+            double weight = 80;
+            double height = 160;
             int age = -21;
             var ex = "Ошибка";
             //Act
@@ -753,6 +753,7 @@ namespace FitnessAssistant_ShiryaevArtem_2ISP11_17Tests
             //Assert
             Assert.AreEqual(ex, act);
         }
+
 
 
     }
